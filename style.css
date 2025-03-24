@@ -34,7 +34,8 @@
     .topnav-centered {
         display: flex;
         justify-content: center; /* Center the links horizontally within the div */
-        flex-grow: 1; /* Allow this section to grow and take available space */
+        gap: 20px; /* Space between the links, adjust as needed */
+        /* flex-grow: 1; /* Allow this section to grow and take available space */ 
     } 
     
     /* Left-aligned section inside the top navigation */
@@ -71,13 +72,12 @@
 
 
 /* Page content */
-  .content {
+.content {
     padding: 16px;
     text-align: center;
-  } 
+} 
 
 
-  
 
 /* Body */
 body{
