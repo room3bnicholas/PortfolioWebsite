@@ -35,7 +35,6 @@
         display: flex;
         justify-content: center; /* Center the links horizontally within the div */
         gap: 20px; /* Space between the links, adjust as needed */
-        /* flex-grow: 1; /* Allow this section to grow and take available space */ 
     } 
     
     /* Left-aligned section inside the top navigation */
@@ -54,6 +53,7 @@
     @media screen and (max-width: 600px) {
         .topnav {
             flex-direction: column; /* Stack items vertically on small screens */
+            align-items: center; /* Ensure the whole navbar is centered */
         }
     
         .topnav a {
@@ -61,11 +61,30 @@
             display: block;
             width: 100%; /* Make the links full-width for mobile view */
             text-align: center;
+            padding: 14px 16px; /* Ensure consistent padding */
+        }
+    
+        /* Hide only the left-aligned section on mobile */
+        .topnav-left {
+            display: none; /* Hide the left section */
+        }
+    
+        /* Keep the right-aligned section visible on mobile */
+        .topnav-right {
+            display: flex; /* Show the right section */
+            justify-content: center; /* Center the contact link */
+            width: 100%; /* Allow the right-aligned section to take full width */
         }
     
         .topnav-centered {
             flex-direction: column; /* Stack the centered links vertically on small screens */
             align-items: center; /* Center the links in the container */
+            gap: 0; /* Remove any gap between the links */
+        }
+    
+        .topnav-centered a {
+            width: auto; /* Allow the links to take their natural width */
+            margin: 0; /* Remove any margin */
         }
     }
   
