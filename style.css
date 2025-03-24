@@ -1,0 +1,84 @@
+/* Style the navbar */
+.topnav {
+    display: flex; /* Using flexbox for layout */
+    justify-content: space-between; /* Space between left and right sections */
+    align-items: center; /* Vertically center the items */
+    top: 0;
+    overflow: hidden;
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+    /* Style the links inside the navigation bar */
+    .topnav a {
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    /* Change the color of links on hover */
+    .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    /* Add a color to the active/current link */
+    .topnav a.active {
+        background-color: #04AA6D;
+        color: white;
+    }
+
+    /* Centered section inside the top navigation */
+    .topnav-centered {
+        display: flex;
+        justify-content: center; /* Center the links horizontally within the div */
+        flex-grow: 1; /* Allow this section to grow and take available space */
+    } 
+    
+    /* Left-aligned section inside the top navigation */
+    .topnav-left {
+        display: flex;
+        justify-content: flex-start; /* Align the "Home" link to the left */
+    }
+
+    /* Right-aligned section inside the top navigation */
+    .topnav-right {
+        display: flex;
+        justify-content: flex-end; /* Align to the right */
+    }
+    
+    /* Responsive navigation menu - display links on top of each other instead of next to each other (for mobile devices) */
+    @media screen and (max-width: 600px) {
+        .topnav {
+            flex-direction: column; /* Stack items vertically on small screens */
+        }
+    
+        .topnav a {
+            float: none;
+            display: block;
+            width: 100%; /* Make the links full-width for mobile view */
+            text-align: center;
+        }
+    
+        .topnav-centered {
+            flex-direction: column; /* Stack the centered links vertically on small screens */
+            align-items: center; /* Center the links in the container */
+        }
+    }
+  
+
+
+/* Page content */
+  .content {
+    padding: 16px;
+    text-align: center;
+  } 
+
+
+
+/* Body */
+body{
+    background-color: white;
+}
