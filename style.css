@@ -69,15 +69,26 @@
     /* Initially hide all links except the active one */
     .topnav a {
         display: none; /* Hide all links by default on small screens */
-        width: 100%; /* Make the links full-width for mobile view */
         text-align: center;
         padding: 14px 16px; /* Ensure consistent padding */
+        width: auto; /* Remove the 100% width */
     }
 
     .topnav-centered {
         flex-direction: column; /* Stack the centered links vertically */
         align-items: center; /* Center the links */
         gap: 0; /* Remove any gap between the links */
+        display: flex; /* Enable flexbox to center the links */
+        justify-content: center; /* Center the items horizontally */
+        width: auto; /* Don't let the container stretch full width */
+    }
+
+    /* Apply consistent padding on the left and right sections */
+    .topnav-left,
+    .topnav-right {
+        display: flex; /* Ensure left and right sections are flex containers too */
+        justify-content: center; /* Center the content in those sections */
+        width: 100%; /* Ensure they also take up full width */
     }
 
     /* Ensure the burger menu button is always visible */
@@ -104,6 +115,8 @@
         display: block; /* Show the links when burger menu is clicked */
     }
 }
+
+
 
 /* Body */
 body{
