@@ -58,16 +58,17 @@
     cursor: pointer;
 }
 
-/* Responsive navigation menu - display links on top of each other instead of next to each other (for mobile devices) */
-@media screen and (max-width: 600px) {
+
+/* Responsive navigation menu for small screens */
+@media screen and (max-width: 640px) { /* Widened max-width */
     .topnav {
         flex-direction: column; /* Stack items vertically on small screens */
         align-items: center; /* Ensure the whole navbar is centered */
     }
 
-    /* Hide all links initially */
+    /* Initially hide all links except the active one */
     .topnav a {
-        display: none;
+        display: none; /* Hide all links by default on small screens */
         width: 100%; /* Make the links full-width for mobile view */
         text-align: center;
         padding: 14px 16px; /* Ensure consistent padding */
@@ -79,19 +80,30 @@
         gap: 0; /* Remove any gap between the links */
     }
 
-    /* Show the burger menu button */
+    /* Ensure the burger menu button is always visible */
     .burger-menu {
         display: block; /* Show burger menu on mobile */
+        cursor: pointer; /* Ensure cursor is a pointer to indicate interactivity */
     }
 
-    /* Show the links when the burger menu is clicked */
-    .topnav-centered.responsive a,
-    .topnav-right.responsive a,
-    .topnav-left.responsive a {
-        display: block;
+    /* Show only the active link at the top of the navbar in mobile view */
+    .topnav a.active {
+        display: block; /* Ensure active link is visible */
+        order: -1; /* Ensure the active link appears at the top of the list */
+    }
+
+    /* When burger menu is clicked, make all the links visible */
+    .topnav.responsive .topnav a {
+        display: block; /* Show links when burger menu is clicked */
+    }
+
+    /* Show the links in the right, left, and centered sections when responsive class is added */
+    .topnav.responsive .topnav-centered a,
+    .topnav.responsive .topnav-right a,
+    .topnav.responsive .topnav-left a {
+        display: block; /* Show the links when burger menu is clicked */
     }
 }
-
 
 /* Body */
 body{

@@ -1,16 +1,12 @@
 // Burger Menu Toggle Function
 function toggleMenu() {
-    const centeredNav = document.querySelector('.topnav-centered');
-    const rightNav = document.querySelector('.topnav-right');
-    const leftNav = document.querySelector('.topnav-left');
+    console.log("Burger menu clicked"); // Debugging line to check if the function is triggered
 
-    // Toggle visibility of all sections (left, center, and right) when burger menu is clicked
-    centeredNav.classList.toggle('responsive');
-    rightNav.classList.toggle('responsive');
-    leftNav.classList.toggle('responsive');
+    const topnav = document.querySelector('.topnav');
+    topnav.classList.toggle('responsive'); // Toggle the 'responsive' class on the whole .topnav
 }
 
-// Dynamic Active Link Assignment
+// Dynamic Active Link Assignment (Restoring the Active Link on Page Load)
 document.addEventListener("DOMContentLoaded", function () {
     const currentPage = window.location.pathname;  // Get the current page URL
     const links = document.querySelectorAll('.topnav a');  // Get all the nav links
