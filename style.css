@@ -1,7 +1,7 @@
 /* Style the navbar */
 .topnav {
     display: flex; /* Using flexbox for layout */
-    justify-content: space-between; /* Space between left and right sections */
+    justify-content: space-between; /* Space between left, center, and right sections */
     align-items: center; /* Vertically center the items */
     top: 0;
     overflow: hidden;
@@ -10,83 +10,87 @@
     position: relative;
 }
 
-    /* Style the links inside the navigation bar */
+/* Style the links inside the navigation bar */
+.topnav a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+/* Left-aligned section inside the top navigation (Home) */
+.topnav-left {
+    display: flex;
+    justify-content: flex-start; /* Align the Home link to the left */
+}
+
+/* Centered section inside the top navigation (About, Current, Past) */
+.topnav-centered {
+    display: flex;
+    justify-content: center; /* Center the links horizontally within the div */
+    gap: 20px; /* Space between the links */
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+/* Right-aligned section inside the top navigation (Contact) */
+.topnav-right {
+    display: flex;
+    justify-content: flex-end; /* Align the Contact link to the right */
+}
+
+/* Burger menu button */
+.burger-menu {
+    display: none; /* Hide burger menu by default */
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Responsive navigation menu - display links on top of each other instead of next to each other (for mobile devices) */
+@media screen and (max-width: 600px) {
+    .topnav {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Ensure the whole navbar is centered */
+    }
+
+    /* Hide all links initially */
     .topnav a {
-        color: #f2f2f2;
+        display: none;
+        width: 100%; /* Make the links full-width for mobile view */
         text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17px;
+        padding: 14px 16px; /* Ensure consistent padding */
     }
 
-    /* Change the color of links on hover */
-    .topnav a:hover {
-        background-color: #ddd;
-        color: black;
-    }
-
-    /* Add a color to the active/current link */
-    .topnav a.active {
-        background-color: #04AA6D;
-        color: white;
-    }
-
-    /* Centered section inside the top navigation */
     .topnav-centered {
-        display: flex;
-        justify-content: center; /* Center the links horizontally within the div */
-        gap: 20px; /* Space between the links, adjust as needed */
-    } 
-    
-    /* Left-aligned section inside the top navigation */
-    .topnav-left,
-    .topnav-right {
-        display: flex;
+        flex-direction: column; /* Stack the centered links vertically */
+        align-items: center; /* Center the links */
+        gap: 0; /* Remove any gap between the links */
     }
-    
+
+    /* Show the burger menu button */
     .burger-menu {
-        display: none; /* Hide burger menu by default */
-        font-size: 30px;
-        cursor: pointer;
+        display: block; /* Show burger menu on mobile */
     }
 
-    /* Responsive navigation menu - display links on top of each other instead of next to each other (for mobile devices) */
-    @media screen and (max-width: 600px) {
-        .topnav {
-            flex-direction: column; /* Stack items vertically on small screens */
-            align-items: center; /* Ensure the whole navbar is centered */
-        }
-
-        /* Ensure the active link is always visible, even on mobile */
-        .topnav a.active {
-            display: block;
-            background-color: #04AA6D; /* Highlight active link */
-        }
-
-        .topnav a {
-            display: block;
-            width: 100%; /* Make the links full-width for mobile view */
-            text-align: center;
-            padding: 14px 16px; /* Ensure consistent padding */
-            display: none; /* Hide all links initially */
-        }
-
-        .topnav-centered {
-            flex-direction: column; /* Stack the centered links vertically on small screens */
-            align-items: center; /* Center the links in the container */
-            gap: 0; /* Remove any gap between the links */
-        }
-
-        .burger-menu {
-            display: block; /* Show burger menu on mobile */
-        }
-
-        /* Show the links when the burger menu is clicked */
-        .topnav-centered.responsive a {
-            display: block;
-        }
+    /* Show the links when the burger menu is clicked */
+    .topnav-centered.responsive a,
+    .topnav-right.responsive a,
+    .topnav-left.responsive a {
+        display: block;
     }
-  
+}
 
 
 /* Body */
