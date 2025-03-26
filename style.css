@@ -60,7 +60,7 @@
 }
 
 /* Responsive navigation menu for small screens */
-@media screen and (max-width: 640px) { /* Widened max-width */
+@media screen and (max-width: 618px) { /* Width that the screen changes to mobile view */
     .topnav {
         flex-direction: column; /* Stack items vertically on small screens */
         align-items: center; /* Ensure the whole navbar is centered */
