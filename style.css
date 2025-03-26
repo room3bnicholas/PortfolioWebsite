@@ -6,8 +6,10 @@
     top: 0;
     overflow: hidden;
     background-color: #333;
-    padding: 10px 20px;
+    padding: 10px 20px; /* Original padding for top and sides */
     position: relative;
+    width: 100%; /* Ensure navbar spans the full width of the screen */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
 }
 
 /* Style the links inside the navigation bar */
@@ -42,7 +44,6 @@
     display: flex;
     justify-content: center; /* Center the links horizontally within the div */
     gap: 20px; /* Space between the links */
-    flex-wrap: wrap; /* Allow wrapping on small screens */
 }
 
 /* Right-aligned section inside the top navigation (Contact) */
@@ -58,12 +59,13 @@
     cursor: pointer;
 }
 
-
 /* Responsive navigation menu for small screens */
 @media screen and (max-width: 640px) { /* Widened max-width */
     .topnav {
         flex-direction: column; /* Stack items vertically on small screens */
         align-items: center; /* Ensure the whole navbar is centered */
+        padding: 10px 20px; /* Add padding to both sides (left and right) */
+        box-sizing: border-box; /* Ensure padding is considered inside the width */
     }
 
     /* Initially hide all links except the active one */
@@ -71,7 +73,7 @@
         display: none; /* Hide all links by default on small screens */
         text-align: center;
         padding: 14px 16px; /* Ensure consistent padding */
-        width: auto; /* Remove the 100% width */
+        width: 100%; /* Ensure links take up the full width */
     }
 
     .topnav-centered {
@@ -80,15 +82,16 @@
         gap: 0; /* Remove any gap between the links */
         display: flex; /* Enable flexbox to center the links */
         justify-content: center; /* Center the items horizontally */
-        width: auto; /* Don't let the container stretch full width */
+        width: 100%; /* Ensure the center section takes up the full width */
     }
 
-    /* Apply consistent padding on the left and right sections */
+    /* Apply equal padding to the left and right sections */
     .topnav-left,
     .topnav-right {
-        display: flex; /* Ensure left and right sections are flex containers too */
-        justify-content: center; /* Center the content in those sections */
-        width: 100%; /* Ensure they also take up full width */
+        display: flex; /* Ensure left and right sections are flex containers */
+        justify-content: center; /* Center the content within each section */
+        width: 100%; /* Ensure both sections take up the full width */
+        padding: 10px 0; /* Remove any excess padding on left and right sections */
     }
 
     /* Ensure the burger menu button is always visible */
@@ -115,6 +118,7 @@
         display: block; /* Show the links when burger menu is clicked */
     }
 }
+
 
 
 
