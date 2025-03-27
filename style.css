@@ -176,4 +176,11 @@ body {
     background-color: lightpink;
 }
 
-        
+/* Footer - spans full width at the bottom */
+.footer {
+    grid-column: 1 / -1;
+    grid-row: 5; /* Place it at the bottom */
+    background-color: #ddd;
+    text-align: center;
+    padding: 20px;
+}
