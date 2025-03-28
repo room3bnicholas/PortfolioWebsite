@@ -7,10 +7,15 @@
     overflow: hidden;
     background-color: #333;
     padding: 10px 20px; /* Original padding for top and sides */
-    position: relative;
+    position: fixed;
     width: 100%; /* Ensure navbar spans the full width of the screen */
     box-sizing: border-box; /* Ensure padding and border are included in width */
     z-index: 1000; /* Ensure navbar is above other content */
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+.topnav.hidden {
+    top: -60px; /* Moves the navbar out of view */
 }
 
 /* Links inside the nav bar */

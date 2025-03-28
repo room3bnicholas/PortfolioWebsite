@@ -20,3 +20,31 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+// Nav bar scroll detection
+let lastScrollY = window.scrollY;
+const navbar = document.querySelector(".topnav");
+const burgerMenu = document.querySelector(".burger-menu");
+
+window.addEventListener("scroll", () => {
+    const currentScrollY = window.scrollY;
+    const isMobile = window.innerWidth <= 768; // Adjust breakpoint as needed
+
+    if (currentScrollY === 0) {
+        // Fully show navbar when at the top
+        navbar.style.transform = "translateY(0)";
+    } else if (currentScrollY > lastScrollY) {
+        // Hide navbar when scrolling down
+        navbar.style.transform = "translateY(-100%)";
+    } else {
+        // Show navbar fully on desktop, partially on mobile
+        navbar.style.transform = isMobile ? "translateY(-90px)" : "translateY(0)";
+    }
+
+    lastScrollY = currentScrollY;
+});
+
+// Ensure navbar is fully visible when the burger menu is clicked
+burgerMenu.addEventListener("click", () => {
+    navbar.style.transform = "translateY(0)";
+});
