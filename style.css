@@ -1,4 +1,4 @@
-/* Style the navbar */
+/* Navbar */
 .topnav {
     display: flex; /* Using flexbox for layout */
     justify-content: space-between; /* Space between left, center, and right sections */
@@ -12,7 +12,7 @@
     box-sizing: border-box; /* Ensure padding and border are included in width */
 }
 
-/* Style the links inside the navigation bar */
+/* Links inside the nav bar */
 .topnav a {
     color: #f2f2f2;
     text-align: center;
@@ -58,67 +58,6 @@
     font-size: 30px;
     cursor: pointer;
 }
-
-/* Responsive navigation menu for small screens */
-@media screen and (max-width: 618px) { /* Width that the screen changes to mobile view */
-    .topnav {
-        flex-direction: column; /* Stack items vertically on small screens */
-        align-items: center; /* Ensure the whole navbar is centered */
-        padding: 10px 20px; /* Add padding to both sides (left and right) */
-        box-sizing: border-box; /* Ensure padding is considered inside the width */
-    }
-
-    /* Initially hide all links except the active one */
-    .topnav a {
-        display: none; /* Hide all links by default on small screens */
-        text-align: center;
-        padding: 14px 16px; /* Ensure consistent padding */
-        width: 100%; /* Ensure links take up the full width */
-    }
-
-    .topnav-centered {
-        flex-direction: column; /* Stack the centered links vertically */
-        align-items: center; /* Center the links */
-        gap: 0; /* Remove any gap between the links */
-        display: flex; /* Enable flexbox to center the links */
-        justify-content: center; /* Center the items horizontally */
-        width: 100%; /* Ensure the center section takes up the full width */
-    }
-
-    /* Apply equal padding to the left and right sections */
-    .topnav-left,
-    .topnav-right {
-        display: flex; /* Ensure left and right sections are flex containers */
-        justify-content: center; /* Center the content within each section */
-        width: 100%; /* Ensure both sections take up the full width */
-        padding: 10px 0; /* Remove any excess padding on left and right sections */
-    }
-
-    /* Ensure the burger menu button is always visible */
-    .burger-menu {
-        display: block; /* Show burger menu on mobile */
-        cursor: pointer; /* Ensure cursor is a pointer to indicate interactivity */
-    }
-
-    /* Show only the active link at the top of the navbar in mobile view */
-    .topnav a.active {
-        display: block; /* Ensure active link is visible */
-        order: -1; /* Ensure the active link appears at the top of the list */
-    }
-
-    /* When burger menu is clicked, make all the links visible */
-    .topnav.responsive .topnav a {
-        display: block; /* Show links when burger menu is clicked */
-    }
-
-    /* Show the links in the right, left, and centered sections when responsive class is added */
-    .topnav.responsive .topnav-centered a,
-    .topnav.responsive .topnav-right a,
-    .topnav.responsive .topnav-left a {
-        display: block; /* Show the links when burger menu is clicked */
-    }
-}
-
 
 
 
@@ -187,4 +126,86 @@ body {
     background-color: #ddd;
     text-align: center;
     padding: 20px;
+}
+
+
+
+
+/* Responsive navigation menu for small screens */
+@media screen and (max-width: 618px) { /* Width that the screen changes to mobile view */
+    .topnav {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Ensure the whole navbar is centered */
+        padding: 10px 20px; /* Add padding to both sides (left and right) */
+        box-sizing: border-box; /* Ensure padding is considered inside the width */
+    }
+
+    /* Initially hide all links except the active one */
+    .topnav a {
+        display: none; /* Hide all links by default on small screens */
+        text-align: center;
+        padding: 14px 16px; /* Ensure consistent padding */
+        width: 100%; /* Ensure links take up the full width */
+    }
+
+    .topnav-centered {
+        flex-direction: column; /* Stack the centered links vertically */
+        align-items: center; /* Center the links */
+        gap: 0; /* Remove any gap between the links */
+        display: flex; /* Enable flexbox to center the links */
+        justify-content: center; /* Center the items horizontally */
+        width: 100%; /* Ensure the center section takes up the full width */
+    }
+
+    /* Apply equal padding to the left and right sections */
+    .topnav-left,
+    .topnav-right {
+        display: flex; /* Ensure left and right sections are flex containers */
+        justify-content: center; /* Center the content within each section */
+        width: 100%; /* Ensure both sections take up the full width */
+        padding: 10px 0; /* Remove any excess padding on left and right sections */
+    }
+
+    /* Ensure the burger menu button is always visible */
+    .burger-menu {
+        display: block; /* Show burger menu on mobile */
+        cursor: pointer; /* Ensure cursor is a pointer to indicate interactivity */
+    }
+
+    /* Show only the active link at the top of the navbar in mobile view */
+    .topnav a.active {
+        display: block; /* Ensure active link is visible */
+        order: -1; /* Ensure the active link appears at the top of the list */
+    }
+
+    /* When burger menu is clicked, make all the links visible */
+    .topnav.responsive .topnav a {
+        display: block; /* Show links when burger menu is clicked */
+    }
+
+    /* Show the links in the right, left, and centered sections when responsive class is added */
+    .topnav.responsive .topnav-centered a,
+    .topnav.responsive .topnav-right a,
+    .topnav.responsive .topnav-left a {
+        display: block; /* Show the links when burger menu is clicked */
+    }
+
+
+    /* index page mobile view*/
+
+    .index-left-column,
+    .index-right-column {
+        display: none; /* Hide left and right columns on mobile */
+    }
+
+    /* Adjust grid layout to accommodate the change */
+    .index-parent {
+        grid-template-columns: 1fr; /* Single-column layout */
+    }
+
+    .index-center-row1,
+    .index-center-row2,
+    .index-center-row3 {
+        grid-column: 1 / -1; /* Make them full-width */
+    }
 }
