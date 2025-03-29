@@ -1,9 +1,13 @@
 // Burger Menu Toggle Function
 function toggleMenu() {
-    console.log("Burger menu clicked"); // Debugging line to check if the function is triggered
-
     const topnav = document.querySelector('.topnav');
     topnav.classList.toggle('responsive'); // Toggle the 'responsive' class on the whole .topnav
+    // Check if the menu is open and switch icons
+    if (topnav.classList.contains("responsive")) {
+        burgerMenu.innerHTML = "✖"; // Cross icon
+    } else {
+        burgerMenu.innerHTML = "&#9776;"; // Hamburger icon
+    }
 }
 
 // Dynamic Active Link Assignment (Restoring the Active Link on Page Load)
