@@ -233,8 +233,8 @@ body {
         display: block; /* Show the links when burger menu is clicked */
     }
 
-    /* index page mobile view */
 
+    /* index page mobile view */
     .index-header-content {
         width: 90%; /* Adjust as needed to match center row width */
     }

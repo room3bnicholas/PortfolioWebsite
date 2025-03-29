@@ -2,6 +2,7 @@
 function toggleMenu() {
     const topnav = document.querySelector('.topnav');
     topnav.classList.toggle('responsive'); // Toggle the 'responsive' class on the whole .topnav
+    const burgerMenu = document.querySelector(".burger-menu");
     // Check if the menu is open and switch icons
     if (topnav.classList.contains("responsive")) {
         burgerMenu.innerHTML = "✖"; // Cross icon
