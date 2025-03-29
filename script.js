@@ -28,7 +28,7 @@ const burgerMenu = document.querySelector(".burger-menu");
 
 window.addEventListener("scroll", () => {
     const currentScrollY = window.scrollY;
-    const isMobile = window.innerWidth <= 768; // Adjust breakpoint as needed
+    const isMobile = window.innerWidth <= 768;
 
     if (currentScrollY === 0) {
         // Fully show navbar when at the top
