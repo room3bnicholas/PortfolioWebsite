@@ -1,55 +1,52 @@
 // Burger Menu Toggle Function
 function toggleMenu() {
     const topnav = document.querySelector('.topnav');
-    topnav.classList.toggle('responsive'); // Toggle the 'responsive' class on the whole .topnav
     const burgerMenu = document.querySelector(".burger-menu");
-    // Check if the menu is open and switch icons
-    if (topnav.classList.contains("responsive")) {
-        burgerMenu.innerHTML = "✖"; // Cross icon
+
+    topnav.classList.toggle('responsive');
+
+    if (topnav.classList.contains('responsive')) {
+        burgerMenu.innerHTML = "✖"; // Close icon
     } else {
         burgerMenu.innerHTML = "&#9776;"; // Hamburger icon
     }
 }
 
-// Dynamic Active Link Assignment (Restoring the Active Link on Page Load)
+// Active link assignment
 document.addEventListener("DOMContentLoaded", function () {
-    const currentPage = window.location.pathname;  // Get the current page URL
-    const links = document.querySelectorAll('.topnav a');  // Get all the nav links
+    const currentPage = window.location.pathname;
+    const links = document.querySelectorAll('.topnav a');
 
     links.forEach(link => {
-        // Check if the href matches the current page URL
         if (currentPage.includes(link.getAttribute('href'))) {
-            link.classList.add('active');  // Add active class to the current page link
+            link.classList.add('active');
         } else {
-            link.classList.remove('active');  // Remove active class from other links
+            link.classList.remove('active');
         }
     });
 });
 
-// Nav bar scroll detection
+// Scroll detection
 let lastScrollY = window.scrollY;
 const navbar = document.querySelector(".topnav");
-const burgerMenu = document.querySelector(".burger-menu");
 
 window.addEventListener("scroll", () => {
     const currentScrollY = window.scrollY;
     const isMobile = window.innerWidth <= 768;
 
     if (currentScrollY === 0) {
-        // Fully show navbar when at the top
         navbar.style.transform = "translateY(0)";
     } else if (currentScrollY > lastScrollY) {
-        // Hide navbar when scrolling down
         navbar.style.transform = "translateY(-100%)";
     } else {
-        // Show navbar fully on desktop, partially on mobile
-        navbar.style.transform = isMobile ? "translateY(-90px)" : "translateY(0)";
+        // Show navbar with burger + active link on scroll up
+        navbar.style.transform = "translateY(0)";
     }
 
     lastScrollY = currentScrollY;
 });
 
-// Ensure navbar is fully visible when the burger menu is clicked
-burgerMenu.addEventListener("click", () => {
+// Force navbar visible when burger is clicked
+document.querySelector(".burger-menu").addEventListener("click", () => {
     navbar.style.transform = "translateY(0)";
 });
