@@ -11,6 +11,19 @@
     <body>
         <!-- Nav Bar -->
         <nav class="topnav">
+            <div class="mobile-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Me</a>
+                <a href="past.html">Past Projects</a>
+                <a href="current.html">Current Projects</a>
+                <a href="contact.html" class="active">Contact</a>
+            </div>
+            
+            <!-- Burger Menu Icon for Mobile -->
+            <div class="burger-menu" onclick="toggleMenu()">
+                &#9776; <!-- Hamburger Icon -->
+            </div>
+
             <!-- Left Aligned -->
             <div class="topnav-left">
                 <a href="index.html">Home</a>
@@ -25,12 +38,7 @@
 
             <!-- Right Aligned -->
              <div class="topnav-right">
-                <a class="active" href="contact.html">Contact</a>
-            </div>
-
-            <!-- Burger Menu Icon for Mobile -->
-            <div class="burger-menu" onclick="toggleMenu()">
-                &#9776; <!-- Hamburger Icon -->
+                <a href="contact.html" class="active">Contact</a>
             </div>
         </nav>
 
