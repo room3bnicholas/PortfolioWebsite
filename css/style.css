@@ -71,6 +71,10 @@
     cursor: pointer;
 }
 
+
+
+
+
 /* Body */
 body {
     background-color: white;
@@ -78,6 +82,11 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
 }
+
+
+
+
+
 
 /* Index Page */
 
@@ -87,6 +96,7 @@ body {
     grid-template-rows: auto;
     width: 100vw;
 }
+
 
 /* Full-width intro */
 .index-header {
@@ -125,8 +135,8 @@ body {
     max-width: 1000px; /* Prevents excessive width on large screens */
 }
 
-/* Middle content blocks */
 
+/* Middle content blocks */
 .index-center-row1,
 .index-center-row2,
 .index-center-row3 {
@@ -175,16 +185,10 @@ body {
 /* Inner container for centering content */
 .index-center-content {
     width: 60%; /* Adjust as needed */
+    margin: auto; /* Centers the content */
 }
 
-/* Footer - spans full width at the bottom */
-.index-footer {
-    grid-column: 1 / -1;
-    grid-row: 5; /* Place it at the bottom */
-    background-color: #ddd;
-    text-align: center;
-    padding: 20px;
-}
+
 
 /* Meet Nick Lee picture stuff */
 .meetMePhoto {
@@ -197,7 +201,123 @@ body {
     display: block;       /* Optional: prevents inline spacing issues */
     margin-left: auto;
     margin-right: auto;
-  }
+}
+
+
+
+
+
+/* General styling for the timeline */
+.timeline {
+    color: #333;
+    list-style: none;
+    padding: 0;
+    position: relative;
+    max-width: 70%; /* Adjust as needed */
+}
+
+.timeline::before {
+    content: '';
+    background: rgb(238, 238, 238);
+    width: 4px;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+}
+
+.timeline li {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.timeline .timeline-date {
+    background: #333;
+    color: rgb(238, 238, 238);
+    padding: 5px 10px;
+    position: absolute;
+    left: -80px;
+    top: 0;
+    border-radius: 5px;
+}
+
+.timeline .timeline-content {
+    background: rgb(238, 238, 238);
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.timeline .timeline-content img {
+    display: block; /* Ensures that margin auto works properly */
+    max-width: 100%; /* Adjust as needed */
+    height: auto;
+    margin: 10px auto; /* Top and bottom margin set to auto */
+    border-radius: 5px; /* Optional for rounded corners */
+}
+
+ul.timeline {
+    list-style-type: none; /* Removes default list styling */
+    padding: 0;
+    margin: auto; /* Centers the timeline container within .index-center-content */
+    width: 80%; /* Adjust as needed */
+}
+
+ul.timeline li {
+    background: rgb(238, 238, 238);
+    color: black;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+
+
+/* General styling for the grid layout */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding-bottom: 15px;
+}
+
+.project-item {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+}
+
+.project-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.project-info {
+    margin-top: 10px;
+}
+
+
+
+
+
+/* Footer - spans full width at the bottom */
+.index-footer {
+    grid-column: 1 / -1;
+    grid-row: 5; /* Place it at the bottom */
+    background-color: #ddd;
+    text-align: center;
+    padding: 20px;
+}
+
 
 /* Responsive navigation menu for small screens */
 @media screen and (max-width: 768px) {
@@ -285,5 +405,16 @@ body {
     .two-box-layout {
         flex-direction: column; /* Change to vertical layout */
         gap: 10px; /* Reduce gap for better spacing */
+    }
+
+
+    /* Increase timeine image size for better viewing */
+    .timeline {
+        max-width: 100%;
+    }
+
+    .project-grid {
+        justify-content: center;
+        grid-template-columns: 80%;
     }
 }
