@@ -157,6 +157,12 @@ body {
     text-align: center;
 }
 
+/* Vertical text alignment in box */
+.index-content-box-vert {
+    display: flex;              /* Enables Flexbox layout */
+    align-items: center; /* Vertically center */
+}
+
 .index-center-row2 {
     color: rgb(238, 238, 238);
     background-color: rgb(22, 22, 22);
@@ -179,6 +185,19 @@ body {
     text-align: center;
     padding: 20px;
 }
+
+/* Meet Nick Lee picture stuff */
+.meetMePhoto {
+    width: 300px;         /* Adjust desired size */
+    height: 300px;        /* Keep same as width to keep it square */
+    object-fit: cover;    /* Ensures the image fills the circle without distortion */
+    object-position: top;     /* Focuses the crop on the top of the image */
+    border-radius: 50%;   /* Makes it circular */
+    overflow: hidden;     /* Ensures overflow doesn’t show */
+    display: block;       /* Optional: prevents inline spacing issues */
+    margin-left: auto;
+    margin-right: auto;
+  }
 
 /* Responsive navigation menu for small screens */
 @media screen and (max-width: 768px) {
