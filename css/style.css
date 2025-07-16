@@ -31,12 +31,15 @@
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    border-radius: 6px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* smooth colour change on hover */
 }
 
 /* Change the color of links on hover */
 .topnav a:hover {
     background-color: #ddd;
     color: black;
+    border-radius: 12px; /* Rounder corners on hover*/
 }
 
 /* Add a color to the active/current link */
@@ -306,7 +309,14 @@ body {
     margin: auto; /* Centers the content */
 }
 
-
+/* Individual Project's Page*/
+.project-parent {
+    background-color: rgb(238, 238, 238);
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 900px) 1fr; /* Center column has a max width */
+    grid-template-rows: auto;
+    width: 100vw;
+}
 
 
 /* General styling for the timeline */
@@ -393,7 +403,7 @@ ul.timeline li {
 
 
 /* Responsive for small screens */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .topnav {
         flex-direction: column;
         align-items: center;
@@ -504,7 +514,7 @@ ul.timeline li {
 }
 
 /* Responsive meet me icon for medium screens */
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1279px) {
     /* Inner container for centering content */
     .index-center-content {
         width: 100%; /* Adjust as needed */
