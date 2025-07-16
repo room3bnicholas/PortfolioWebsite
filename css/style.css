@@ -45,6 +45,10 @@
     color: white;
 }
 
+.topnav a.active:hover {
+    background-color: #038a5a; /* Darker green on hover */
+}
+
 /* Left-aligned section inside the top navigation (Home) */
 .topnav-left {
     display: flex;
@@ -169,7 +173,8 @@ body {
 
 /* Vertical text alignment in box */
 .index-content-box-vert {
-    display: flex;              /* Enables Flexbox layout */
+    padding: 100px 0px 0px 0px;
+    display: flex; /* Enables Flexbox layout */
     align-items: center; /* Vertically center */
 }
 
@@ -236,6 +241,25 @@ body {
     margin-top: 10px;
 }
 
+
+
+/* About me button*/ 
+
+.about-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #04AA6D; /* Green */
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.about-button:hover {
+    background-color: #038a5a; /* Darker green on hover */
+}
 
 
 
@@ -365,7 +389,10 @@ ul.timeline li {
 }
 
 
-/* Responsive navigation menu for small screens */
+
+
+
+/* Responsive for small screens */
 @media screen and (max-width: 768px) {
     .topnav {
         flex-direction: column;
@@ -431,13 +458,18 @@ ul.timeline li {
         display: none; /* Hide layout containers in mobile view */
     }
 
+    
+    .index-content-box{
+        padding: 0%; /* Remove image padding so it is centered on screen */
+    }
+
 
     /* index page mobile view */
     .index-header-content {
         width: 90%; /* Adjust as needed to match center row width */
     }
 
-    /* Adjust grid layout to accommodate the change */
+    /* Adjust grid layout */
     .index-parent {
         grid-template-columns: 1fr; /* Single-column layout */
     }
@@ -468,5 +500,13 @@ ul.timeline li {
 
     .projects-center-row1 {
         padding: 40px 0px 0px 0px;
+    }
+}
+
+/* Responsive meet me icon for medium screens */
+@media screen and (max-width: 1280px) {
+    /* Inner container for centering content */
+    .index-center-content {
+        width: 100%; /* Adjust as needed */
     }
 }
