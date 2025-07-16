@@ -267,10 +267,16 @@ body {
     background-color: rgb(238, 238, 238);
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 60px 0px 0px 0px;
 }
 
 /* Inner container for centering content */
+.projects-center-title {
+    text-align: center;
+    width: 60%; /* Adjust as needed */
+    margin: auto; /* Centers the content */
+}
+
 .projects-center-content {
     width: 60%; /* Adjust as needed */
     margin: auto; /* Centers the content */
@@ -456,5 +462,11 @@ ul.timeline li {
     .project-grid {
         justify-content: center;
         grid-template-columns: 80%;
+    }
+
+
+
+    .projects-center-row1 {
+        padding: 40px 0px 0px 0px;
     }
 }
