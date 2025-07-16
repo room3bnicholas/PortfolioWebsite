@@ -205,6 +205,78 @@ body {
 
 
 
+/* General styling for the grid layout */
+.index-project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding-bottom: 15px;
+}
+
+.index-project-item {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.index-project-item:hover {
+    transform: translateY(-5px);
+}
+
+.index-project-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.index-project-info {
+    color: #333;
+    margin-top: 10px;
+}
+
+
+
+
+
+/* Projects Page */
+
+.projects-parent {
+    background-color: rgb(22, 22, 22);
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 900px) 1fr; /* Center column has a max width */
+    grid-template-rows: auto;
+    width: 100vw;
+}
+
+.projects-center-row2 {
+    color: rgb(238, 238, 238);
+}
+
+/* Middle content blocks */
+.projects-center-row1,
+.projects-center-row2,
+.projects-center-row3 {
+    grid-column: 1 / -1; /* Make them full-width */
+    display: flex;
+    justify-content: center; /* Centers content */
+}
+
+.projects-center-row1 {
+    background-color: rgb(238, 238, 238);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Inner container for centering content */
+.projects-center-content {
+    width: 60%; /* Adjust as needed */
+    margin: auto; /* Centers the content */
+}
+
+
 
 
 /* General styling for the timeline */
@@ -270,39 +342,7 @@ ul.timeline li {
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-
-
-
-/* General styling for the grid layout */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding-bottom: 15px;
-}
-
-.project-item {
-    background: #f9f9f9;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
-}
-
-.project-item:hover {
-    transform: translateY(-5px);
-}
-
-.project-item img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-.project-info {
-    margin-top: 10px;
+    
 }
 
 
