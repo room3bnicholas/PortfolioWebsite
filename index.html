@@ -1,121 +1,135 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <html lang="en">
-        <meta content="width=device-width" name="viewport">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">               
-        <title>Portfolio</title>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
 
-    <body>
-        <!-- Nav Bar -->
-        <nav class="topnav">
-            <div class="mobile-menu">
-                <a href="index.html" class="active">Home</a>
-                <a href="projects.html">My Projects</a>
-                <a href="about.html">About Me</a>
-                <a href="contact.html">Contact</a>
-            </div>
-            
-            <!-- Burger Menu Icon for Mobile -->
-            <div class="burger-menu" onclick="toggleMenu()">
-                &#9776; <!-- Hamburger Icon -->
-            </div>
+<head>
+    <meta charset="utf-8">
+    <html lang="en">
+    <meta content="width=device-width" name="viewport">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
-            <!-- Left Aligned -->
-            <div class="topnav-left">
-                <a href="index.html" class="active">Home</a>
-            </div>
+<body>
+    <!-- Nav Bar -->
+    <nav class="topnav">
+        <div class="mobile-menu">
+            <a href="index.html" class="active">Home</a>
+            <a href="projects.html">My Projects</a>
+            <a href="about.html">About Me</a>
+            <a href="contact.html">Contact</a>
+        </div>
 
-            <!-- Centered -->
-            <div class="topnav-centered">
-                <a href="projects.html">My Projects</a>
-                <a href="about.html">About Me</a>
-            </div>
+        <!-- Burger Menu Icon for Mobile -->
+        <div class="burger-menu" onclick="toggleMenu()">
+            &#9776; <!-- Hamburger Icon -->
+        </div>
 
-            <!-- Right Aligned -->
-             <div class="topnav-right">
-                <a href="contact.html">Contact</a>
-            </div>
-        </nav>
+        <!-- Left Aligned -->
+        <div class="topnav-left">
+            <a href="index.html" class="active">Home</a>
+        </div>
 
-        
-        <!-- Body -->
+        <!-- Centered -->
+        <div class="topnav-centered">
+            <a href="projects.html">My Projects</a>
+            <a href="about.html">About Me</a>
+        </div>
 
-        <div class="index-parent">
-            <div class="index-header">
-                    <div class="index-header-content">
-                    <h1>Welcome to my Portfolio Website</h1>
-                    <p><h3>
-                        Explore my journey through my Electronic and Computer Engineering degree. Discover a collection of past and ongoing projects that showcase my skills and passion for creating cutting-edge solutions.
-                    </h3></p>
-                </div>
-            </div>
+        <!-- Right Aligned -->
+        <div class="topnav-right">
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
 
-            <div class="index-center-row1">
-                <div class="index-center-content two-box-layout">
-                    <div class="index-content-box">
-                        <h2>Meet Nicholas Lee</h2>
-                        <img class="meetMePhoto" src="assets/img/NickLee05.jpg" alt="Nick Lee">
-                    </div>
-                    <div class="index-content-box index-content-box-vert">
-                        <p>
-                            I am a dedicated student pursuing an MEng degree in Electronic and Computer Engineering at the University of York, driven by a passion for technology and innovation. My journey began with a fascination for how things work, leading me to explore various aspects of engineering. I am developing skills in programming, circuit design, and project management, which I have applied in several projects, including a low cost educational games console. My goal is to develop projects to improve my understanding of technology.
-                            <br><br><a href="about.html" class="about-button">More About Me...</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
 
-            <div class="index-center-row2">
-                <div class="index-center-content">
-                    <h2>My Projects Showcase</h2>
-                    <p>Explore my projects that highlight my skills, solutions and curiosity towards technology and engineering.</p>
-                    <br>
-                    <div class="index-project-grid">
-                        <!-- Project Item 1 -->
-                        <div class="index-project-item">
-                            <img src="assets/img/project5.jpg" alt="Image of Project">
-                            <div class="index-project-info">
-                                <h3>ByteFlash</h3>
-                                <p>This project centers on developing an affordable and programmable games console designed to align with the UK Government’s Electronics in Schools Initiative, specifically targeting Year 8 students (aged 12–13). The console is built around two core principles: accessibility for educational use and hands-on engagement with STEM concepts. By combining a user-friendly interface, modifiable code, and low-cost hardware, the device aims to demystify electronics and programming while fostering creativity and problem-solving skills in young learners.</p>
-                                <a href="projects.html#ByteFlash" class="about-button">Learn More...</a>
-                            </div>
-                        </div>
-                        
-                        <!-- Project Item 2 -->
-                        <div class="index-project-item">
-                            <img src="assets/img/project6.jpg" alt="Image of Project">
-                            <div class="index-project-info">
-                                <h3>This Portfolio Website!</h3>
-                                <p>Description of the ongoing project. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                <a href="projects.html#PortfolioWebsite" class="about-button">Learn More...</a>
-                            </div>
-                        </div>
-                        
-                        <!-- Add more project items as needed -->
-                    </div>
-                </div>
-            </div>
+    <!-- Body -->
 
-            <!-- <div class="index-center-row3"> 
-                
-            </div>-->
-            
-            <div class="index-footer">
-                <h2>Footer</h2>
+    <div class="index-parent">
+        <div class="index-header">
+            <div class="index-header-content">
+                <h1>Welcome to my Portfolio Website</h1>
                 <p>
-                    Text and stuff and Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel hic voluptas facilis blanditiis asperiores nisi ab, maiores, cum iusto omnis minima voluptate repellendus. Eligendi libero quod magni, consectetur excepturi doloremque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, unde maxime? Quasi saepe nihil harum eius. Deserunt laudantium commodi, aliquid doloribus eius veniam qui ab suscipit, dignissimos facere porro harum.
-                </p>
-                <p>
-                    &copy; 2025 by Nick Lee. All Rights Reserved.
+                <h3>
+                    Explore my journey through my Electronic and Computer Engineering degree. Discover a collection of
+                    past and ongoing projects that showcase my skills and passion for creating cutting-edge solutions.
+                </h3>
                 </p>
             </div>
         </div>
 
-        <!-- JavaScript File (Keep at bottom for improved loading)-->
-        <script src="js/script.js"></script>
-    </body>
+        <div class="index-center-row1">
+            <div class="index-center-content two-box-layout">
+                <div class="index-content-box">
+                    <h2>Meet Nicholas Lee</h2>
+                    <img class="meetMePhoto" src="assets/img/NickLee05.jpg" alt="Nick Lee">
+                </div>
+                <div class="index-content-box index-content-box-vert">
+                    <p>
+                        I am a dedicated student pursuing an MEng degree in Electronic and Computer Engineering at the
+                        University of York, driven by a passion for technology and innovation. My journey began with a
+                        fascination for how things work, leading me to explore various aspects of engineering. I am
+                        developing skills in programming, circuit design, and project management, which I have applied
+                        in several projects, including a low cost educational games console. My goal is to develop
+                        projects to improve my understanding of technology.
+                        <br><br><a href="about.html" class="about-button">More About Me...</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="index-center-row2">
+            <div class="index-center-content">
+                <h2>My Projects Showcase</h2>
+                <p>Explore my projects that highlight my skills, solutions and curiosity towards technology and
+                    engineering.</p>
+                <br>
+                <div class="index-project-grid">
+                    <!-- Project Item 1 -->
+                    <div class="index-project-item">
+                        <img src="assets/img/project5.jpg" alt="Image of Project">
+                        <div class="index-project-info">
+                            <h3>ByteFlash</h3>
+                            <p>This project centers on developing an affordable and programmable games console designed
+                                to align with the UK Government’s Electronics in Schools Initiative, specifically
+                                targeting Year 8 students (aged 12–13). The console is built around two core principles:
+                                accessibility for educational use and hands-on engagement with STEM concepts. By
+                                combining a user-friendly interface, modifiable code, and low-cost hardware, the device
+                                aims to demystify electronics and programming while fostering creativity and
+                                problem-solving skills in young learners.</p>
+                            <a href="projects.html#ByteFlash" class="about-button">Learn More...</a>
+                        </div>
+                    </div>
+
+                    <!-- Project Item 2 -->
+                    <div class="index-project-item">
+                        <img src="assets/img/project6.jpg" alt="Image of Project">
+                        <div class="index-project-info">
+                            <h3>This Portfolio Website!</h3>
+                            <p>Description of the ongoing project. Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit.</p>
+                            <a href="projects.html#PortfolioWebsite" class="about-button">Learn More...</a>
+                        </div>
+                    </div>
+
+                    <!-- Add more project items as needed -->
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="index-center-row3"> 
+                
+            </div>-->
+
+        <div class="index-footer">
+            <p>
+                &copy; 2026 by Nicholas Lee. All Rights Reserved.
+            </p>
+        </div>
+    </div>
+
+    <!-- JavaScript File (Keep at bottom for improved loading)-->
+    <script src="js/script.js"></script>
+</body>
+
 </html>
