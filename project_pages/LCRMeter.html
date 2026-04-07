@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <html lang="en">
+    <meta content="width=device-width" name="viewport">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <title>LCR Meter</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <!-- Nav Bar -->
+    <nav class="topnav">
+        <div class="mobile-menu">
+            <a href="../index.html">Home</a>
+            <a href="../projects.html" class="active">My Projects</a>
+            <a href="../about.html">About Me</a>
+            <a href="../contact.html">Contact</a>
+        </div>
+
+        <!-- Burger Menu Icon for Mobile -->
+        <div class="burger-menu" onclick="toggleMenu()">
+            &#9776; <!-- Hamburger Icon -->
+        </div>
+
+        <!-- Left Aligned -->
+        <div class="topnav-left">
+            <a href="../index.html">Home</a>
+        </div>
+
+        <!-- Centered -->
+        <div class="topnav-centered">
+            <a href="../projects.html" class="active">My Projects</a>
+            <a href="../about.html">About Me</a>
+        </div>
+
+        <!-- Right Aligned -->
+        <div class="topnav-right">
+            <a href="../contact.html">Contact</a>
+        </div>
+    </nav>
+
+
+    <!-- Body -->
+    <div class="project-parent">
+
+        <!-- Title -->
+        <div class="projects-center-row1">
+            <div class="projects-center-title">
+                <h1>LCR Meter</h1>
+                <p>
+                    Here is a more in-depth overview of my group project on developing an LCR Meter<br>
+                    You will find an introduction, team composition, key features of the project, the proposed
+                    educational impact, technical specification, and a conclusion. This is largely based on the final
+                    report I wrote for the project.
+                </p>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div>
+            <h2>Introduction</h2>
+            <p>
+                Our pitch was that the York Metrology Systems (YMS) LCR Meter is an innovative and affordable electronic
+                measuring instrument designed to revolutionise STEM education by inspiring young students to explore
+                electronics and engineering. This project was conceived with the goal of providing a user-friendly,
+                accessible tool for secondary schools that can measure inductance, capacitance, and resistance while
+                also offering advanced features such as voltage measurement and complex impedance analysis. The YMS LCR
+                Meter aims to bridge the gap between theoretical knowledge and practical application, fostering a deeper
+                understanding of electronics among students.
+            </p>
+
+            <br>
+
+            <h2>Team Composition</h2>
+            <ul>
+                <li>
+                    Vishwa Gamaralalage (Team Lead & Project Manager):<br>Ensured project coordination and adherence to
+                    timelines.
+                </li>
+                <br>
+                <li>
+                    Nick Lee (Hardware Lead):<br>Managed circuit design (except for the complex impedance circuit
+                    provided by Vishwa), and PCB design.
+                </li>
+                <br>
+                <li>
+                    Aliyah Odeyemi (Documentation & 3D Design Lead):<br>Produced technical documentation and designed
+                    the meter’s case.
+                </li>
+                <br>
+                <li>
+                    Raunak Bal:<br>Created script for the project presentation. Note Raunak was a late addition to the
+                    team.
+                </li>
+                <br>
+                <li>
+                    Thomas Fuller (Quality Assurance Lead):<br>Ensured all project outputs met quality standards.
+                </li>
+            </ul>
+
+            <br>
+
+            <h2>Key Features of the Meter</h2>
+            <p>
+                The YMS LCR Meter is a multi-functional device that offers a range of features tailored for educational
+                use:
+            </p>
+            <ol>
+                <h3>
+                    <li>
+                        Versatile Measurement Capabilities
+                    </li>
+                </h3>
+                <ul>
+                    <li>
+                        The meter measures resistance, capacitance, and inductance.
+                    </li>
+                    <li>
+                        In addition, we planned to include advanced measurements such as ESR (Equivalent Series
+                        Resistance) of capacitors, Q-factor of inductors, voltage difference, bias voltage of diodes,
+                        and complex impedance of passive components.
+                    </li>
+                </ul>
+
+                <h3>
+                    <li>
+                        User-Friendly Design
+                    </li>
+                </h3>
+                <ul>
+                    <li>
+                        Equipped with a rotary switch for selecting the component type, making it intuitive to use.
+                    </li>
+                    <li>
+                        Features a 1602 LCD screen that displays measurements in clear, easy-to-read format (up to four
+                        significant figures).
+                    </li>
+                </ul>
+
+                <h3>
+                    <li>
+                        Educational Alignment
+                    </li>
+                </h3>
+                <ul>
+                    <li>
+                        Accompanied by a user guide and lesson plans to integrate the meter into classroom activities.
+                    </li>
+                    <li>
+                        Supports hands-on learning by enabling students to explore real-world applications of passive
+                        components in circuits like amplifiers, filters, and more.
+                    </li>
+                </ul>
+            </ol>
+            </p>
+
+            <br>
+
+            <h2>Educational Impact</h2>
+            <p>
+                The primary objective of this project was to spark interest in STEM fields among students by making
+                electronic measurement accessible and engaging. By providing a tool that combines simplicity with
+                advanced functionality, the YMS LCR Meter empowers educators to create dynamic and interactive lessons.
+                The meter’s ability to measure voltage and current eliminates the need for separate voltmeters and
+                ammeters, reducing clutter and complexity in the classroom.
+            </p>
+            <p>
+                The project also emphasizes sustainability by offering an affordable solution that can replace multiple
+                instruments, thereby promoting cost-effective resource allocation in schools.
+            </p>
+
+
+            <br>
+
+            <h2>Technical Specifications</h2>
+            <h3>Hardware:</h3>
+            <p>
+                The meter is based on the STM32 Nucleo F303K8 microcontroller for embedded firmware development, and
+                features a custom PCB design for compact and reliable assembly.
+            </p>
+            <h3>Software:</h3>
+            <p>
+                The planned firmware was going to be developed to handle precise measurements and display results on the
+                LCD screen. It featured separate code blocks for different circuit configurations (RC, LR, voltage
+                divider) ensure accurate calculations.
+            </p>
+            <p>
+                Unfortunately, the YMS group was not able to produce a working compilation of the code as the original
+                board was damaged and the software lead was not present for our demonstration.
+            </p>
+            <h3>Design Considerations:</h3>
+            <p>
+                Use of various CAD software to design circuits, for case design, and for PCB layout.
+            </p>
+
+            <br>
+
+            <h2>Outcomes and Conclusion</h2>
+            <p>
+                The project successfully delivered a non-functional prototype of the meter board. We demonstrated a PCB
+                based board which was limited to only measuring complex impedance due to time constraints. The YMS group
+                also failed to showcase a functional case for the board. However, the YMS group has made a meter fit to
+                the specification provided.
+            </p>
+            <p>
+                I belive that my contributions to the project as the hardware lead were successful, as I designed
+                the core circuits and the PCB for the board, which culminated in a board suitable for demonstration if
+                we had a microcontroller with the correct code flashed.
+            </p>
+        </div>
+
+        <div class="index-footer">
+            <p>
+                &copy; 2026 by Nicholas Lee. All Rights Reserved.
+            </p>
+        </div>
+
+        <!-- JavaScript File (Keep at bottom for improved loading)-->
+        <script src="js/script.js"></script>
+</body>
+
+</html>
