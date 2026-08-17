@@ -339,7 +339,7 @@ body {
     list-style: none;
     padding: 0;
     position: relative;
-    max-width: 70%;
+    max-width: 90dvh;
 }
 
 .timeline::before {
